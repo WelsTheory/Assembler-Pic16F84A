@@ -1,0 +1,82 @@
+LIST P=16F84A
+INCLUDE <P16F84A.INC>
+    TIEMPO EQU 0x0C
+    TIEMPO2 EQU 0x0D
+
+; CONFIG INICIAL DEL MICROCONTROLADOR
+ __CONFIG _FOSC_XT & _WDTE_OFF & _PWRTE_ON & _CP_OFF ;
+
+    ORG 0
+    BSF STATUS, RP0 ;Seleccionamos el Banco 1
+    CLRF TRISB	    ;El PortB como salida
+    BCF STATUS,RP0  ;Seleccionamos el Banco 0
+
+INICIO
+    MOVLW B'00000000'	;Cargamos 8bits en 0 a W
+    MOVWF PORTB		;Cargamos W en PortB
+    CALL RETARDO	;Llamamos a Retardo
+    MOVLW B'00000001'	;El bit menos significativo en 1 se carga 
+    MOVWF PORTB		;Cargamos W en PortB
+    CALL RETARDO	;Así se repite en las 8 salidas del PORTB
+    MOVLW B'00000010'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00000100'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00001000'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00010000'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00100000'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'01000000'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'10000000'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'01000000'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00100000'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00010000'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00001000'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00000100'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00000010'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00000001'
+    MOVWF PORTB
+    CALL RETARDO
+    MOVLW B'00000000'
+    MOVWF PORTB
+    CALL RETARDO
+    GOTO INICIO
+
+RETARDO
+    MOVLW   D'255' ;carga W con 255
+    MOVFW   TIEMPO ;Tiempo=255
+DEC 
+    DECFSZ  TIEMPO ;Decrementa en 1 a Tiempo, si Tiempo =0 salta de instrucción
+    GOTO    DEC1   ;Salta a DEC1
+    RETURN
+DEC1	
+    MOVLW   D'255' ;carga W con 255
+    MOVFW   TIEMPO2 ;Tiempo2 = 255
+DEC3	
+    DECFSZ  TIEMPO2 ;Decrementa en 1 a Tiempo, si Tiempo =0 salta de instrucción
+    GOTO    DEC3    
+    GOTO    DEC	    ;Salta a DEC1
+    END

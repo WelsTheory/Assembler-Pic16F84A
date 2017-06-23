@@ -1,0 +1,42 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Fri Jun 23 11:06:29 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000082
+                   .cinit    romdata   0x000041    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/NEWPIC_       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000042      
+                            0x002007    0x002007      
+            68 out of 1094 program addresses used, program memory utilization is 6%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      DEC   0x000039    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+                     DEC1   0x00003c    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+                     DEC3   0x00003e    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+                   INICIO   0x000003    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+                  RETARDO   0x000037    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000003    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+                  RETARDO   0x000037    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+                      DEC   0x000039    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+                     DEC1   0x00003c    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+                     DEC3   0x00003e    program     static E:\Electronica\ejemplos_creados\Retardo2.X\newpic_8b_general.asm
+
+
