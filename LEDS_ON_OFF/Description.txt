@@ -1,0 +1,5 @@
+Leds_ON_OFF = open with Proteus
+
+Main.asm = It's the main program 
+
+Hex/Retardo2.X.production.hex = This includes code, EEPROM data, User bytes and most importantly, configuration words.
