@@ -1,0 +1,244 @@
+MPASM 5.77            PROGRAMA_PRINCIPAL.ASM   2-22-2018  11:23:18         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;;**************** WELS THEORY ******************
+                      00002 ;Descripción: Control de 2 Motores DC con el L293D
+                      00003 ;Los motores pueden avanzar, retroceder, girar a la izquierda, derecha
+                      00004 ;o detenerse.
+                      00005 ; 
+                      00006 ; Autor:           Wels (@soywels) 
+                      00007 ; 
+                      00008 ; Copyright:       Wels Theory 2018
+                      00009 ;
+                      00010 ; Fecha            28 de Febrero del 2018
+                      00011 ;  
+                      00012 ; Facebook:        https://www.facebook.com/welstheory
+                      00013 ; 
+                      00014 ; Youtube:         https://www.youtube.com/wels_theory
+                      00015 ; 
+                      00016 ; Instagram:       https://www.instagram.com/wels_theory/  
+                      00017 ;
+                      00018 ; CONFIG
+                      00019 ; __config 0xFFF1
+Warning[205]: Found directive in column 1. (__CONFIG)
+2007   3FF1           00020 __CONFIG _FOSC_XT & _WDTE_OFF & _PWRTE_ON & _CP_OFF
+Warning[205]: Found directive in column 1. (LIST)
+                      00021 LIST P=16F84A
+Warning[205]: Found directive in column 1. (INCLUDE)
+                      00022 INCLUDE <P16F84A.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Nov 22 2017
+                      00005 ;  MPASM PIC16F84A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2017 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00209         LIST
+                      00023 
+                      00024         
+                      00025 ;STOP
+                      00026 #DEFINE STOP PORTA,3    
+                      00027 ;Motor 1
+                      00028 #DEFINE MOTOR1 PORTA,0
+                      00029 ;Motor 2
+                      00030 #DEFINE MOTOR2 PORTA,1
+                      00031 ;
+                      00032 ;
+                      00033 ;SI STOP = 1 -> MODULOS HABILITADOS
+                      00034 ; MOTOR1 - MOTOR2 = SALIDA
+                      00035 ;   0    -   0    = RETROCESO
+                      00036 ;   0    -   1    = IZQUIERDA
+                      00037 ;   1    -   0    = DERECHA
+                      00038 ;   1    -   1    = ADELANTE
+                      00039 ;
+                      00040 ;SI STOP = 0 -> MODULOS DESHABILITADOS
+MPASM 5.77            PROGRAMA_PRINCIPAL.ASM   2-22-2018  11:23:18         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00041 ;
+                      00042 ;
+                      00043 ;RB0 = Enable 1 -> RB2 y RB3 controlan el giro Motor1
+                      00044 ;RB7 = Enable 2 -> RB4 y RB5 controlan el giro Motor2
+                      00045 ;
+                      00046 ; ZONA DE CÓDIGOS ********************************************************************
+                      00047         ORG     0
+0000                  00048 INICIO
+0000   1683           00049         BSF     STATUS,RP0
+0001   1585           00050         BSF     STOP        ;ENTRADA
+0002   1405           00051         BSF     MOTOR1
+0003   1485           00052         BSF     MOTOR2
+0004   0186           00053         CLRF    PORTB       ;SALIDA
+0005   1283           00054         BCF     STATUS,RP0
+0006                  00055 START
+0006   1D85           00056         BTFSS   STOP        ;STOP = 1?
+0007   2???           00057         GOTO    DETENER     ;STOP = 0
+0008   1805           00058         BTFSC   MOTOR1      ;MOTOR1 = 0?
+0009   2???           00059         GOTO    DIRECCION   ;MOTOR1 = 1
+000A   1885           00060         BTFSC   MOTOR2      ;MOTOR2 = 0?
+000B   2???           00061         GOTO    IZQUIERDA   ;MOTOR1 = 0 - MOTOR2 = 1
+000C   2???           00062         GOTO    ATRAS       ;MOTOR1 = 0 - MOTOR2 = 0
+                      00063         
+000D                  00064 IZQUIERDA
+000D   3091           00065         MOVLW   B'10010001'
+000E   2???           00066         GOTO    SALIDA
+000F                  00067 DERECHA
+000F   3089           00068         MOVLW   B'10001001'
+0010   2???           00069         GOTO    SALIDA
+                      00070 
+0011                  00071 ATRAS
+0011   30A5           00072         MOVLW   B'10100101'
+0012   2???           00073         GOTO    SALIDA
+                      00074         
+0013                  00075 DETENER
+0013   0103           00076         CLRW                ;W = 0
+0014   2???           00077         GOTO    SALIDA
+                      00078         
+0015                  00079 DIRECCION
+0015   1C85           00080         BTFSS   MOTOR2      ;MOTOR2=1?
+0016   2???           00081         GOTO    DERECHA     ;MOTOR1 = 1 - MOTOR2 =0
+0017   3099           00082         MOVLW   B'10011001' ;MOTOR1 = 1 - MOTOR2 = 1
+0018                  00083 SALIDA                      ;RB7 - RB0 
+0018   0086           00084         MOVWF   PORTB
+0019   2???           00085         GOTO    START
+3FF1                  00086         END
+MPASM 5.77            PROGRAMA_PRINCIPAL.ASM   2-22-2018  11:23:18         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ATRAS                             00000011
+C                                 00000000
+DC                                00000001
+DERECHA                           0000000F
+DETENER                           00000013
+DIRECCION                         00000015
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INICIO                            00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+IZQUIERDA                         0000000D
+MOTOR1                            PORTA,0
+MOTOR2                            PORTA,1
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+MPASM 5.77            PROGRAMA_PRINCIPAL.ASM   2-22-2018  11:23:18         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RP0                               00000005
+RP1                               00000006
+SALIDA                            00000018
+START                             00000006
+STATUS                            00000003
+STOP                              PORTA,3
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+MPASM 5.77            PROGRAMA_PRINCIPAL.ASM   2-22-2018  11:23:18         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+Errors   :     0
+Warnings :     3 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+
