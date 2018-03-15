@@ -1,0 +1,228 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed Mar 14 11:44:55 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000001    program   0x000004
+                   .org_1       code   0x000004    program   0x000306
+.config_2007_BUILD/DEFAULT/PRODUCTION/PROGRAM       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000002      
+                            0x000004    0x000186      
+                            0x002007    0x002007      
+            391 out of 1094 program addresses used, program memory utilization is 35%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+   BCD_IncrementaCentenas   0x000181    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+    BCD_IncrementaDecenas   0x00017b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+              BCD_Resta10   0x000177    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+              BIN_BCD_Fin   0x000184    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+                BIN_a_BCD   0x000174    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+                 CENTENAS   0x000044    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+              CENTIMETROS   0x000048    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+       DISTANCIA_CORRECTA   0x000037    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                ECHO_ES_0   0x000017    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                ECHO_ES_1   0x000011    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                   INICIO   0x000005    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+           INTERRUPCIONES   0x00001d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+      LCD_2Lineas4Bits5x7   0x000106    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+                LCD_Borra   0x000104    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+                 LCD_Byte   0x000136    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+         LCD_ByteCompleto   0x00013d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+             LCD_Caracter   0x000109    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+          LCD_CodigoCGROM   0x000113    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+           LCD_CursorIncr   0x0000f4    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+            LCD_CursorOFF   0x000102    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+             LCD_CursorON   0x000100    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+   LCD_DosEspaciosBlancos   0x00012d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_EnheMayuscula   0x00011a    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_EnheMinuscula   0x000114    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+                LCD_Envia   0x00010b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+         LCD_EnviaBlancos   0x000130    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+       LCD_EnviaByteLetra   0x000149    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+         LCD_EnviaComando   0x000107    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+      LCD_EnviaOtroBlanco   0x000131    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+         LCD_EsFinalLinea   0x000164    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+           LCD_EscribeLCD   0x0000e0    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+             LCD_FinCGROM   0x000127    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+           LCD_FinMensaje   0x000159    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+        LCD_FinMovimiento   0x000173    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+   LCD_FinVisualizaDigito   0x00014b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+                LCD_Grado   0x000121    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+           LCD_Inicializa   0x0000c8    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+               LCD_Linea1   0x0000f6    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+               LCD_Linea2   0x0000f8    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_LineaEnBlanco   0x000129    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+              LCD_MUESTRA   0x000026    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+              LCD_Mensaje   0x00014c    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+    LCD_MensajeMovimiento   0x00015a    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+               LCD_Nibble   0x000141    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+       LCD_NoEsFinalLinea   0x000169    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+     LCD_NoUltimoCaracter   0x000156    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+    LCD_NoUltimoCaracter2   0x00016f    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+                  LCD_OFF   0x0000fe    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+       LCD_PosicionLinea1   0x0000fa    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+       LCD_PosicionLinea2   0x0000fc    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+      LCD_PrimeraPosicion   0x00015e    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+  LCD_TresEspaciosBlancos   0x00012f    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+      LCD_UnEspacioBlanco   0x00012b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_VisualizaAlto   0x00013e    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_VisualizaBajo   0x000140    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+    LCD_VisualizaCaracter   0x000160    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+LCD_VisualizaOtroCaracter   0x000150    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+                    MAYOR   0x00002f    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                    MENOR   0x000033    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+        MUESTRA_DISTANCIA   0x000038    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+               Mensaje_cm   0x00005d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+             Mensaje_dist   0x00004c    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+          Mensaje_distMax   0x000071    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+          Mensaje_distMin   0x000061    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                 Mensajes   0x00004b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+    R1Decima_BucleExterno   0x0000be    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+   R1Decima_BucleExterno2   0x0000bc    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+    R1Decima_BucleInterno   0x0000c0    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        R1ms_BucleExterno   0x0000a8    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        R1ms_BucleInterno   0x0000aa    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            RetardoMicros   0x000094    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        Retardo_100micros   0x00008e    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            Retardo_100ms   0x00009a    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+         Retardo_10micros   0x000081    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+             Retardo_10ms   0x0000a0    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_10s   0x0000b2    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+          Retardo_1Decima   0x0000bb    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_1ms   0x0000a6    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+               Retardo_1s   0x0000b8    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        Retardo_200micros   0x00008b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            Retardo_200ms   0x000098    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+         Retardo_20micros   0x000093    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+             Retardo_20ms   0x00009e    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_20s   0x0000b0    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_2ms   0x0000a4    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+               Retardo_2s   0x0000b6    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+          Retardo_4micros   0x000087    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        Retardo_500micros   0x000088    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            Retardo_500ms   0x0000ba    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+         Retardo_50micros   0x000090    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+             Retardo_50ms   0x00009c    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+          Retardo_5micros   0x000086    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_5ms   0x0000a2    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+               Retardo_5s   0x0000b4    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardos_ms   0x0000a7    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            Rmicros_Bucle   0x000095    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+                    START   0x00000d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000005    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                    START   0x00000d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                ECHO_ES_1   0x000011    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                ECHO_ES_0   0x000017    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+           INTERRUPCIONES   0x00001d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+              LCD_MUESTRA   0x000026    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                    MAYOR   0x00002f    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                    MENOR   0x000033    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+       DISTANCIA_CORRECTA   0x000037    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+        MUESTRA_DISTANCIA   0x000038    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                 CENTENAS   0x000044    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+              CENTIMETROS   0x000048    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+                 Mensajes   0x00004b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+             Mensaje_dist   0x00004c    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+               Mensaje_cm   0x00005d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+          Mensaje_distMin   0x000061    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+          Mensaje_distMax   0x000071    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\Programa_principal.asm
+         Retardo_10micros   0x000081    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+          Retardo_5micros   0x000086    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+          Retardo_4micros   0x000087    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        Retardo_500micros   0x000088    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        Retardo_200micros   0x00008b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        Retardo_100micros   0x00008e    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+         Retardo_50micros   0x000090    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+         Retardo_20micros   0x000093    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            RetardoMicros   0x000094    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            Rmicros_Bucle   0x000095    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            Retardo_200ms   0x000098    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            Retardo_100ms   0x00009a    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+             Retardo_50ms   0x00009c    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+             Retardo_20ms   0x00009e    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+             Retardo_10ms   0x0000a0    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_5ms   0x0000a2    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_2ms   0x0000a4    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_1ms   0x0000a6    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardos_ms   0x0000a7    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        R1ms_BucleExterno   0x0000a8    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+        R1ms_BucleInterno   0x0000aa    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_20s   0x0000b0    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+              Retardo_10s   0x0000b2    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+               Retardo_5s   0x0000b4    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+               Retardo_2s   0x0000b6    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+               Retardo_1s   0x0000b8    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+            Retardo_500ms   0x0000ba    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+          Retardo_1Decima   0x0000bb    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+   R1Decima_BucleExterno2   0x0000bc    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+    R1Decima_BucleExterno   0x0000be    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+    R1Decima_BucleInterno   0x0000c0    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\RETARDOS.INC
+           LCD_Inicializa   0x0000c8    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+           LCD_EscribeLCD   0x0000e0    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+           LCD_CursorIncr   0x0000f4    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+               LCD_Linea1   0x0000f6    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+               LCD_Linea2   0x0000f8    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+       LCD_PosicionLinea1   0x0000fa    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+       LCD_PosicionLinea2   0x0000fc    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+                  LCD_OFF   0x0000fe    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+             LCD_CursorON   0x000100    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+            LCD_CursorOFF   0x000102    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+                LCD_Borra   0x000104    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+      LCD_2Lineas4Bits5x7   0x000106    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+         LCD_EnviaComando   0x000107    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+             LCD_Caracter   0x000109    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+                LCD_Envia   0x00010b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+          LCD_CodigoCGROM   0x000113    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_EnheMinuscula   0x000114    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_EnheMayuscula   0x00011a    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+                LCD_Grado   0x000121    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+             LCD_FinCGROM   0x000127    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_LineaEnBlanco   0x000129    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+      LCD_UnEspacioBlanco   0x00012b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+   LCD_DosEspaciosBlancos   0x00012d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+  LCD_TresEspaciosBlancos   0x00012f    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+         LCD_EnviaBlancos   0x000130    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+      LCD_EnviaOtroBlanco   0x000131    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+                 LCD_Byte   0x000136    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+         LCD_ByteCompleto   0x00013d    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_VisualizaAlto   0x00013e    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+        LCD_VisualizaBajo   0x000140    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+               LCD_Nibble   0x000141    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+       LCD_EnviaByteLetra   0x000149    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+   LCD_FinVisualizaDigito   0x00014b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD.INC
+              LCD_Mensaje   0x00014c    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+LCD_VisualizaOtroCaracter   0x000150    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+     LCD_NoUltimoCaracter   0x000156    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+           LCD_FinMensaje   0x000159    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+    LCD_MensajeMovimiento   0x00015a    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+      LCD_PrimeraPosicion   0x00015e    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+    LCD_VisualizaCaracter   0x000160    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+         LCD_EsFinalLinea   0x000164    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+       LCD_NoEsFinalLinea   0x000169    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+    LCD_NoUltimoCaracter2   0x00016f    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+        LCD_FinMovimiento   0x000173    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\LCD_Mensaje.INC
+                BIN_a_BCD   0x000174    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+              BCD_Resta10   0x000177    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+    BCD_IncrementaDecenas   0x00017b    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+   BCD_IncrementaCentenas   0x000181    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+              BIN_BCD_Fin   0x000184    program     static E:\Wels Theory\Electrónica\PIC16F84A\ULTRASONIDO.X\BIN_BCD.INC
+
+
